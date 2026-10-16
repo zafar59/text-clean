@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://textcleanupstudio.com/sitemap.xml

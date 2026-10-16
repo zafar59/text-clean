@@ -1,124 +1,850 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Text Cleanup Studio — Clean, Format & Normalize Text Online</title>
-    <meta name="title" content="Text Cleanup Studio — Clean, Format & Normalize Text Online" />
-    <meta name="description" content="Clean up messy text, remove extra whitespace, eliminate duplicate lines, format cases, strip emojis, and inspect detailed statistics. 100% private, free, and in-browser." />
-    <meta name="keywords" content="clean text online, remove extra spaces, remove duplicate lines, fix text formatting, convert text case, remove emojis, text cleanup tool, text formatter" />
-    <meta name="author" content="Text Cleanup Studio" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://textcleanupstudio.com/" />
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://textcleanupstudio.com/" />
-    <meta property="og:title" content="Text Cleanup Studio — Clean, Format & Normalize Text Online" />
-    <meta property="og:description" content="Clean up messy text, remove extra whitespace, eliminate duplicate lines, format cases, strip emojis, and inspect detailed statistics. 100% private and in-browser." />
-    <meta property="og:image" content="https://textcleanupstudio.com/og-image.png" />
+  <!-- Primary Meta Assets -->
+  <title>Text Cleanup Studio – Free Online Text Sanitizer &amp; Formatter</title>
+  <meta name="description" content="Clean messy text, strip zero-width spaces, remove AI markdown artifacts, and fix line breaks online. 100% private, client-side, with zero data leakage." />
+  <link rel="canonical" href="https://textcleanupstudio.com/" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://textcleanupstudio.com/" />
-    <meta property="twitter:title" content="Text Cleanup Studio — Clean, Format & Normalize Text Online" />
-    <meta property="twitter:description" content="Clean up messy text, remove extra whitespace, eliminate duplicate lines, format cases, strip emojis, and inspect detailed statistics. 100% private and in-browser." />
-    <meta property="twitter:image" content="https://textcleanupstudio.com/og-image.png" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://textcleanupstudio.com/" />
+  <meta property="og:title" content="Text Cleanup Studio – Free Online Text Sanitizer &amp; Formatter" />
+  <meta property="og:description" content="Clean messy text, strip zero-width spaces, remove AI markdown artifacts, and fix line breaks online. 100% private, client-side, with zero data leakage." />
+  <meta property="og:image" content="https://textcleanupstudio.com/og-image.png" />
+  <meta property="og:image:alt" content="Text Cleanup Studio Interface Preview" />
+  <meta property="og:site_name" content="Text Cleanup Studio" />
 
-    <!-- Icons & Manifest -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <meta name="theme-color" content="#2563eb" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://textcleanupstudio.com/" />
+  <meta name="twitter:title" content="Text Cleanup Studio – Free Online Text Sanitizer &amp; Formatter" />
+  <meta name="twitter:description" content="Clean messy text, strip zero-width spaces, remove AI markdown artifacts, and fix line breaks online. 100% private, client-side, with zero data leakage." />
+  <meta name="twitter:image" content="https://textcleanupstudio.com/og-image.png" />
 
-    <!-- Sentry Error Monitoring -->
-    <script
-      src="https://js.sentry-cdn.com/ee643bc21faa128b3e5b352ca63e6d99.min.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Fonts & Stylesheet (Optimized for FCP and LCP) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+  </noscript>
+  <link rel="stylesheet" href="/src/style.css" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-
-    <!-- Structured Data (WebApplication & FAQPage) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebApplication",
-          "@id": "https://textcleanupstudio.com/#webapp",
-          "name": "Text Cleanup Studio",
-          "url": "https://textcleanupstudio.com/",
-          "description": "Professional text cleaner, whitespace normalizer, duplicate line remover, and case converter running 100% client-side in your browser.",
-          "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "All",
-          "browserRequirements": "Requires modern JavaScript-enabled browser",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
-          "featureList": [
-            "Whitespace and line cleanup",
-            "Duplicate line removal",
-            "Case conversion (UPPER, lower, Title, Sentence)",
-            "Emoji and special character removal",
-            "Find and replace with case sensitivity",
-            "Side-by-side visual diff comparison",
-            "Instant text statistics (words, characters, reading time)",
-            "Custom presets and optional private local history",
-            "Installable Progressive Web App (PWA)"
-          ]
+  <!-- Structured Data (JSON-LD): WebApplication, SoftwareApplication, FAQPage, HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://textcleanupstudio.com/#webapp",
+        "name": "Text Cleanup Studio",
+        "url": "https://textcleanupstudio.com/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All modern browsers (Chrome, Edge, Safari, Firefox)",
+        "browserRequirements": "Requires JavaScript. Runs entirely client-side.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
         },
-        {
-          "@type": "FAQPage",
-          "@id": "https://textcleanupstudio.com/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is my text uploaded or stored on any server?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Text Cleanup Studio processes 100% of your text directly in your web browser. No text data ever leaves your device or is sent over any network."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I install Text Cleanup Studio as an app?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. As a Progressive Web App (PWA), you can install Text Cleanup Studio directly to your device desktop or home screen for quick access."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does duplicate line removal treat blank lines?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "You can configure whether blank lines are ignored or deduplicated. By default, duplicate non-empty lines are eliminated while preserving their first occurrence order."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How are custom presets saved?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Custom cleanup rules and presets are saved securely in your browser's localStorage. They remain strictly on your local device."
-              }
-            }
-          ]
+        "description": "A high-performance, privacy-first, client-side text sanitization utility to strip zero-width spaces, normalize whitespace, clean AI preambles, and convert delimiters with zero server logging.",
+        "featureList": [
+          "Zero-width unicode character stripping (\\u200B-\\u200D, \\uFEFF)",
+          "AI preamble and response chatter removal",
+          "Markdown code fence and syntax stripping",
+          "Whitespace and double-spacing normalization",
+          "Order-preserving duplicate line deduplication",
+          "List to CSV and custom delimiter transformation",
+          "Instant live diff comparison with visual addition and deletion highlights",
+          "100% ephemeral client-side processing without server requests"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://textcleanupstudio.com/#software",
+        "name": "Text Cleanup Studio",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Browser-based",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
         }
-      ]
-    }
-    </script>
-  </head>
-  <body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-blue-100 selection:text-blue-900 min-h-screen">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://textcleanupstudio.com/#howto",
+        "name": "How to Clean and Sanitize Messy Text Online",
+        "description": "Clean malformed text, remove invisible characters, and strip AI boilerplate in 3 simple steps.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Paste Raw Text",
+            "text": "Paste your messy text, AI output, or copied document into the Raw Input panel, or click Upload to load a file."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Choose a Preset or Custom Rules",
+            "text": "Click a one-click preset such as AI Response Sanitizer, Dev & Data Prep, or Document De-noise, or toggle specific regex rules."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Copy or Download Cleaned Text",
+            "text": "Inspect the live character reduction metrics and diff comparison, then click Copy Output or Download."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://textcleanupstudio.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I remove extra line breaks from copied text?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To remove extra line breaks, paste your text into Text Cleanup Studio and activate 'Fix Double Spacing' or 'Remove Empty Lines'. The tool instantly collapses excessive newline sequences into single paragraph breaks without deleting required sentence spacing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I strip ChatGPT and Claude markdown artifacts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Select the 'AI Response Sanitizer' preset. It automatically removes conversational preambles like 'Certainly!' and closing pleasantries, un-nests code from triple-backtick fences while preserving indented syntax, and strips unnecessary asterisks and blockquotes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this tool store or upload my text?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Text Cleanup Studio operates 100% client-side inside your web browser memory. Zero bytes are uploaded, transmitted, or logged on remote servers, ensuring strict privacy for sensitive code, proprietary datasets, and personal drafts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert a list of items into comma-separated values?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Choose the 'List ⇄ CSV Tool' preset, or select 'Lines ➔ CSV' under Stage 4 Typography & Casing. The engine strips blank rows, trims whitespace around each item, deduplicates lines, and outputs a clean comma-separated string."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I detect and remove zero-width spaces online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Paste your code or text into the input panel with 'Strip Zero-Width Characters' enabled. The regex engine targets invisible characters including zero-width spaces (\\u200B), non-joiners (\\u200C), byte-order marks (\\uFEFF), and displays the count of purged invisible anomalies."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ================= App Header ================= -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"/>
+          <path d="M19 3v4"/>
+          <path d="M21 5h-4"/>
+        </svg>
+      </div>
+      <div class="brand-titles">
+        <h1 class="brand-title">Text Cleanup Studio</h1>
+        <span class="brand-subtitle">High-Performance • Deterministic • Zero Data Leakage</span>
+      </div>
+    </div>
+
+    <!-- Privacy Shield Indicator -->
+    <div class="privacy-badge" title="100% Client-Side: Zero network requests are sent. Your text never leaves your browser." id="privacyBadge">
+      <span class="privacy-pulse"></span>
+      <span>100% Client-Side &amp; Private</span>
+    </div>
+
+    <div class="header-actions">
+      <!-- Sample Picker Dropdown -->
+      <select id="sampleSelect" class="select-input" title="Load realistic test samples">
+        <option value="" disabled selected>✨ Load Sample Text...</option>
+        <option value="aiResponse">🤖 Messy AI Output (Preamble &amp; Fences)</option>
+        <option value="devBugs">🐛 Zero-Width Chars &amp; Smart Quotes</option>
+        <option value="messyMarkdown">📝 Markdown &amp; HTML Entities</option>
+        <option value="csvList">📊 Itemized List for CSV</option>
+        <option value="massiveStressTest">⚡ Large Payload (&gt;100k Chars)</option>
+      </select>
+
+      <!-- Theme Switcher -->
+      <button id="themeToggleBtn" class="btn btn-outline btn-icon" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+        <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2"/>
+          <path d="M12 20v2"/>
+          <path d="m4.93 4.93 1.41 1.41"/>
+          <path d="m17.66 17.66 1.41 1.41"/>
+          <path d="M2 12h2"/>
+          <path d="M20 12h2"/>
+          <path d="m6.34 17.66-1.41 1.41"/>
+          <path d="m19.07 4.93-1.41 1.41"/>
+        </svg>
+      </button>
+
+      <!-- Reset All -->
+      <button id="resetAllBtn" class="btn btn-outline btn-sm" title="Reset all options and clear text">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        <span>Reset</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= Presets Strip ================= -->
+  <section class="preset-strip" aria-label="Presets">
+    <div class="preset-label">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      <span>Presets:</span>
+    </div>
+    <button class="preset-pill active" data-preset="aiSanitizer" title="Strips AI preambles, pleasantries, markdown fences and fixes spacing">
+      <span>🤖 AI Response Sanitizer</span>
+    </button>
+    <button class="preset-pill" data-preset="devDataPrep" title="Removes invisible zero-width chars, smart quotes, control chars and collapses spaces">
+      <span>💻 Dev &amp; Data Prep</span>
+    </button>
+    <button class="preset-pill" data-preset="documentDenoise" title="Strips markdown syntax, decodes HTML, sentence casing &amp; single paragraph spacing">
+      <span>📄 Document De-noise</span>
+    </button>
+    <button class="preset-pill" data-preset="csvConverter" title="Converts lines to comma-separated CSV values, deduplicates and sorts">
+      <span>📊 List ⇄ CSV Tool</span>
+    </button>
+    <button class="preset-pill" data-preset="minimalCleaner" title="Only trims edge spaces, collapses spaces and standardizes line breaks">
+      <span>␣ Minimal Space Trimmer</span>
+    </button>
+    <button class="preset-pill" data-preset="deepClean" title="Applies comprehensive deep hygiene pipeline">
+      <span>🧼 Total Deep Clean</span>
+    </button>
+  </section>
+
+  <!-- ================= Main Application Container ================= -->
+  <main class="main-container">
+
+    <!-- Massive Payload Warning Banner -->
+    <div id="massivePayloadBanner" class="massive-payload-banner">
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span id="massiveBannerText">Massive payload detected (>100k characters). Asynchronous worker processing active.</span>
+      </div>
+      <span id="workerStatusBadge" style="font-size: 0.75rem; background: rgba(0,0,0,0.2); padding: 0.2rem 0.5rem; border-radius: 4px;">Ready</span>
+    </div>
+
+    <!-- Rule Engine Drawer / Accordion -->
+    <section class="rules-panel" id="rulesPanel">
+      <div class="rules-header" id="rulesHeader">
+        <div class="rules-header-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="9" y2="9"/><line x1="4" x2="20" y1="15" y2="15"/><line x1="10" x2="10" y1="3" y2="21"/><line x1="16" x2="16" y1="3" y2="21"/></svg>
+          <span>Deterministic Pipeline Rules &amp; Regex Specs</span>
+          <span class="rules-active-count" id="activeRulesCount">8 active rules</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:0.5rem;">
+          <span style="font-size:0.75rem; color:var(--text-muted);" id="togglePanelLabel">Click to collapse / expand</span>
+          <svg id="rulesChevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+        </div>
+      </div>
+
+      <div class="rules-body" id="rulesBody">
+        <!-- Stage 1: Invisible Unicode & Special Character Sanitization -->
+        <div class="rule-group">
+          <div class="rule-group-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            <span>Stage 1: Invisible Unicode</span>
+          </div>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip Zero-Width Characters</span>
+              <span class="toggle-desc">Purge \u200B-\u200D, \uFEFF, \u2060, soft hyphens</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripZeroWidth" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip Byte-Order Mark (BOM)</span>
+              <span class="toggle-desc">Remove leading or inline \uFEFF</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripByteOrderMark" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip ASCII Control Characters</span>
+              <span class="toggle-desc">Remove \x00-\x1F except \t, \n, \r</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripControlChars" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+        </div>
+
+        <!-- Stage 2: Whitespace & Line Structure Normalization -->
+        <div class="rule-group">
+          <div class="rule-group-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16"/><path d="M16 6l4 6-4 6"/></svg>
+            <span>Stage 2: Whitespace &amp; Lines</span>
+          </div>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Trim Edge Spaces</span>
+              <span class="toggle-desc">Strip leading/trailing space per line (^[ \t]+|[ \t]+$)</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_trimEdgeSpaces" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Collapse Multiple Spaces</span>
+              <span class="toggle-desc">Replace 2+ horizontal spaces with 1 ([^\S\r\n]{2,})</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_collapseSpaces" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Fix Double Spacing</span>
+              <span class="toggle-desc">Ensure single paragraph break (\n{3,} ➔ \n\n)</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_fixDoubleSpacing" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Remove Empty Lines</span>
+              <span class="toggle-desc">Strip empty or whitespace-only lines (^\s*[\r\n])</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_removeEmptyLines" />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Remove Duplicate Lines</span>
+              <span class="toggle-desc">Deduplicate identical lines preserving order</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_removeDuplicateLines" />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.25rem;">
+            <span style="font-size:0.8rem; font-weight:600; color:var(--text-primary);">Sort Lines</span>
+            <select id="cfg_sortLines" class="select-input" style="padding:0.25rem 0.5rem; font-size:0.75rem;">
+              <option value="none">No Sorting</option>
+              <option value="asc">Alphabetical (A-Z)</option>
+              <option value="desc">Reverse (Z-A)</option>
+              <option value="natural">Natural Sort (1, 2, 10)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Stage 3: Formatting & Syntax Stripping -->
+        <div class="rule-group">
+          <div class="rule-group-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Stage 3: AI &amp; Markdown Formatting</span>
+          </div>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip AI Artifacts &amp; Chatter</span>
+              <span class="toggle-desc">Purge "Certainly!", "Sure thing", "Hope this helps!"</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripAIArtifacts" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip Markdown Fences</span>
+              <span class="toggle-desc">Remove ```code blocks``` while retaining inner content</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripMarkdownFences" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip Markdown Syntax</span>
+              <span class="toggle-desc">Remove *bold*, # headers, > quotes, bullet markers</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripMarkdownSyntax" />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip Markdown Links</span>
+              <span class="toggle-desc">Convert [title](url) to title</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripMarkdownLinks" />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Strip HTML Tags</span>
+              <span class="toggle-desc">Remove &lt;div&gt;, &lt;p&gt;, &lt;span&gt; tags</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_stripHtmlTags" />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Decode HTML Entities</span>
+              <span class="toggle-desc">Convert &amp;amp;, &amp;lt;, &amp;quot;, &amp;#39; to ASCII</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_decodeHtmlEntities" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+        </div>
+
+        <!-- Stage 4: Typographical & Casing Adjustments -->
+        <div class="rule-group">
+          <div class="rule-group-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+            <span>Stage 4: Typography &amp; Casing</span>
+          </div>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Smart Quote Normalization</span>
+              <span class="toggle-desc">Convert [“”] to " and [‘’] to '</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_normalizeQuotes" checked />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <label class="toggle-item">
+            <div class="toggle-label">
+              <span class="toggle-title">Normalize Dashes &amp; Ellipses</span>
+              <span class="toggle-desc">Convert em-dash (—) to (-) and … to ...</span>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="cfg_normalizeDashes" />
+              <span class="slider"></span>
+            </label>
+          </label>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.25rem;">
+            <span style="font-size:0.8rem; font-weight:600; color:var(--text-primary);">Letter Casing</span>
+            <select id="cfg_casingMode" class="select-input" style="padding:0.25rem 0.5rem; font-size:0.75rem;">
+              <option value="none">Preserve Original Casing</option>
+              <option value="sentence">Sentence case</option>
+              <option value="title">Title Case</option>
+              <option value="upper">UPPERCASE</option>
+              <option value="lower">lowercase</option>
+              <option value="camel">camelCase</option>
+              <option value="kebab">kebab-case</option>
+              <option value="snake">snake_case</option>
+            </select>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.25rem;">
+            <span style="font-size:0.8rem; font-weight:600; color:var(--text-primary);">List ⇄ Delimiter</span>
+            <select id="cfg_delimiterConversion" class="select-input" style="padding:0.25rem 0.5rem; font-size:0.75rem;">
+              <option value="none">No Delimiter Change</option>
+              <option value="to-csv">Lines ➔ CSV (comma-separated)</option>
+              <option value="to-csv-quoted">Lines ➔ CSV ("quoted")</option>
+              <option value="to-list">CSV ➔ Itemized Lines</option>
+              <option value="to-bullets">CSV ➔ Bulleted List (- item)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Custom Find & Replace -->
+        <div class="find-replace-container">
+          <div style="font-size:0.78rem; font-weight:700; color:var(--accent-primary); display:flex; align-items:center; gap:0.35rem;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>Find &amp; Replace:</span>
+          </div>
+          <input type="text" id="findText" class="find-input" placeholder="Find pattern or string..." />
+          <input type="text" id="replaceText" class="find-input" placeholder="Replace with..." />
+          <label style="display:flex; align-items:center; gap:0.3rem; font-size:0.76rem; color:var(--text-secondary); cursor:pointer;">
+            <input type="checkbox" id="findRegex" /> Regex
+          </label>
+          <label style="display:flex; align-items:center; gap:0.3rem; font-size:0.76rem; color:var(--text-secondary); cursor:pointer;">
+            <input type="checkbox" id="findMatchCase" /> Match Case
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Live Metrics Bar ================= -->
+    <section class="metrics-strip" id="metricsBar" aria-label="Metrics Reporting">
+      <div class="metrics-group">
+        <div class="metric-item">
+          <span class="metric-label">Words</span>
+          <span class="metric-value">
+            <span id="metricWordsOut">0</span>
+            <span class="metric-delta" id="metricWordsDelta"></span>
+          </span>
+        </div>
+
+        <div class="metric-item">
+          <span class="metric-label">Chars (Raw / No Space)</span>
+          <span class="metric-value">
+            <span id="metricCharsOut">0</span>
+            <span style="font-size:0.75rem; color:var(--text-muted);" id="metricCharsNoSpace">/ 0</span>
+          </span>
+        </div>
+
+        <div class="metric-item">
+          <span class="metric-label">Lines</span>
+          <span class="metric-value">
+            <span id="metricLinesOut">0</span>
+            <span class="metric-delta" id="metricLinesDelta"></span>
+          </span>
+        </div>
+
+        <div class="metric-item">
+          <span class="metric-label">Payload Size</span>
+          <span class="metric-value" id="metricSize">0 B</span>
+        </div>
+
+        <div class="metric-item">
+          <span class="metric-label">Execution Time</span>
+          <span class="metric-value" id="metricSpeed" style="font-size:0.8rem; color:var(--text-muted);">&lt; 1 ms</span>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <!-- Invisible Chars Purged Badge -->
+        <div id="invisibleCharWarning" class="invisible-char-warning" style="display:none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span id="invisibleCharText">0 Invisible Unicode Chars Stripped</span>
+        </div>
+
+        <!-- Reduction Percentage Pill -->
+        <div class="reduction-badge" id="reductionBadge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m3 7 6 6 4-4 8 8"/><path d="M14 17h7v-7"/></svg>
+          <span id="reductionPercentText">0.00% Smaller</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Workspace View Controls ================= -->
+    <div class="workspace-view-controls">
+      <div class="view-segmented-control" role="tablist">
+        <button class="view-segment-btn active" data-view="split" id="viewSplitBtn" role="tab" aria-selected="true">
+          <span>◫ Split View</span>
+        </button>
+        <button class="view-segment-btn" data-view="diff" id="viewDiffBtn" role="tab" aria-selected="false">
+          <span>⇄ Diff Comparison</span>
+        </button>
+        <button class="view-segment-btn" data-view="outputOnly" id="viewOutputOnlyBtn" role="tab" aria-selected="false">
+          <span>⬚ Cleaned Only</span>
+        </button>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:0.4rem;">
+        <button id="undoBtn" class="btn btn-outline btn-sm" title="Undo (Ctrl+Z)" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+          <span>Undo</span>
+        </button>
+        <button id="redoBtn" class="btn btn-outline btn-sm" title="Redo (Ctrl+Y)" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 7v6h-6"/><path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"/></svg>
+          <span>Redo</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= Editors Grid ================= -->
+    <div class="editors-grid" id="editorsGrid">
+      <!-- Input Panel -->
+      <section class="editor-panel editor-panel-input" id="inputPanel">
+        <header class="editor-panel-header">
+          <div class="editor-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span>Raw Input</span>
+            <span id="inputCharCountBadge" style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-mono);">(0 chars)</span>
+          </div>
+
+          <div class="editor-toolbar">
+            <input type="file" id="fileUploadInput" accept=".txt,.md,.csv,.json,.log,.js,.ts,.html,.css" style="display:none;" />
+            <button id="uploadFileBtn" class="btn btn-outline btn-sm" title="Upload local file">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <span>Upload</span>
+            </button>
+            <button id="pasteClipboardBtn" class="btn btn-outline btn-sm" title="Paste from clipboard">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+              <span>Paste</span>
+            </button>
+            <button id="clearInputBtn" class="btn btn-outline btn-sm" title="Clear input text">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              <span>Clear</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="editor-content-area">
+          <textarea id="rawInputText" class="editor-textarea" placeholder="Paste messy text, AI responses, code snippets, or drop a file here..."></textarea>
+          <!-- Empty State Overlay for Input -->
+          <div class="empty-state-overlay" id="inputEmptyOverlay">
+            <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            </svg>
+            <div class="empty-state-title">Ready for Input</div>
+            <div class="empty-state-subtitle">Paste messy text, select a sample preset above, or drag &amp; drop a text file.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Output Panel -->
+      <section class="editor-panel editor-panel-output" id="outputPanel">
+        <header class="editor-panel-header">
+          <div class="editor-title" style="color:var(--accent-emerald);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Cleaned Output</span>
+            <span id="outputCharCountBadge" style="font-size:0.72rem; color:var(--text-muted); font-family:var(--font-mono);">(0 chars)</span>
+          </div>
+
+          <div class="editor-toolbar">
+            <button id="copyOutputBtn" class="btn btn-primary btn-sm" title="Copy cleaned text to clipboard (Ctrl+Shift+C)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copy Output</span>
+            </button>
+            <button id="downloadOutputBtn" class="btn btn-outline btn-sm" title="Download sanitized file">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="editor-content-area">
+          <textarea id="cleanedOutputText" class="editor-textarea" readonly placeholder="Sanitized output will appear here automatically in real time..."></textarea>
+          <!-- Empty State Overlay for Output -->
+          <div class="empty-state-overlay" id="outputEmptyOverlay">
+            <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            <div class="empty-state-title">Awaiting Text</div>
+            <div class="empty-state-subtitle">Deterministic pipeline transformations execute instantly as you type or change rules.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= Diff Comparison Panel ================= -->
+    <section class="diff-panel-wrapper" id="diffPanelWrapper">
+      <header class="editor-panel-header">
+        <div class="editor-title" style="color:var(--accent-cyan);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>
+          <span>Visual Diff Comparison (Original vs Cleaned)</span>
+        </div>
+        <div style="font-size:0.75rem; color:var(--text-muted); display:flex; align-items:center; gap:0.75rem;">
+          <span style="color:var(--diff-removed-text);">■ Deletions &amp; Stripped Tokens</span>
+          <span style="color:var(--diff-added-text);">■ Additions &amp; Normalized Syntax</span>
+        </div>
+      </header>
+
+      <div id="diffContentArea">
+        <div class="diff-empty-state">No diff available. Paste text in raw input to view diff comparison.</div>
+      </div>
+    </section>
+
+    <!-- ================= Semantic Content for SEO, AEO & GEO ================= -->
+    <article class="seo-content-container" id="documentationSection" itemscope itemtype="https://schema.org/Article">
+      
+      <!-- Hero Narrative matching search intent -->
+      <section class="seo-hero-heading">
+        <h2>Free Client-Side Text Sanitizer, AI Formatter &amp; Invisible Character Stripper</h2>
+        <p>Text Cleanup Studio is a deterministic, privacy-first text utility built for developers, AI prompt engineers, researchers, and writers. It sanitizes malformed copy, strips invisible zero-width bugs, removes conversational AI preambles, and standardizes whitespace with zero server logging.</p>
+      </section>
+
+      <!-- H2 Feature Breakdown: Explicit, declarative explanations -->
+      <section class="seo-features-breakdown" aria-labelledby="featuresHeading">
+        <h2 id="featuresHeading" style="font-size: 1.45rem; font-weight: 800; margin-bottom: 1.25rem; color: var(--text-primary); text-align: center;">Production-Ready Text Sanitization Features</h2>
+        
+        <div class="seo-features-grid">
+          <div class="seo-feature-card">
+            <div class="seo-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            </div>
+            <h3>Strip Invisible Unicode &amp; Zero-Width Characters</h3>
+            <p>Purges invisible unicode corruption such as zero-width spaces (<code>\u200B</code>), zero-width non-joiners (<code>\u200C</code>), byte-order marks (<code>\uFEFF</code>), soft hyphens (<code>\u00AD</code>), and hidden ASCII control characters that break JSON parsers, compilers, and database queries.</p>
+          </div>
+
+          <div class="seo-feature-card">
+            <div class="seo-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Remove AI Artifacts &amp; Markdown Fences</h3>
+            <p>Eliminates boilerplate ChatGPT and Claude pleasantries (<em>"Certainly!", "Here is what you requested:", "Hope this helps!"</em>), strips triple-backtick markdown fences while retaining indentation, and removes headers, blockquotes, and link markup.</p>
+          </div>
+
+          <div class="seo-feature-card">
+            <div class="seo-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16"/><path d="M16 6l4 6-4 6"/></svg>
+            </div>
+            <h3>Whitespace &amp; Line Break Normalization</h3>
+            <p>Trims edge whitespace per line, collapses multiple spaces into a single space, standardizes double spacing (<code>\n{3,}</code> to <code>\n\n</code>), and removes blank empty lines caused by PDF copy-pasting or text extraction tools.</p>
+          </div>
+
+          <div class="seo-feature-card">
+            <div class="seo-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+            </div>
+            <h3>Deduplicate Lines &amp; Natural Sorting</h3>
+            <p>Deduplicates identical lines while maintaining original order, or reorganizes lists into alphabetical, reverse, or natural numerical sorting without mangling line data.</p>
+          </div>
+
+          <div class="seo-feature-card">
+            <div class="seo-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+            </div>
+            <h3>Typography &amp; Smart Quote Straightening</h3>
+            <p>Normalizes curly quotes (<code>“ ” ‘ ’</code>) to standard ASCII quotes (<code>" '</code>), fixes em-dashes and ellipses, and formats casing to Sentence case, Title Case, UPPERCASE, lowercase, camelCase, or snake_case.</p>
+          </div>
+
+          <div class="seo-feature-card">
+            <div class="seo-feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+            </div>
+            <h3>List ⇄ CSV &amp; Delimiter Converter</h3>
+            <p>Converts newline-separated records into comma-separated values (with optional quote wrapping) or converts CSV strings into itemized lines and markdown bullet lists in one click.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- H2 Privacy Narrative for GEO Trust Signals -->
+      <section class="privacy-spotlight" aria-labelledby="privacyHeading">
+        <div class="privacy-spotlight-header">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+          <h2 id="privacyHeading">Why Browser-Based Client-Side Text Sanitization Matters</h2>
+        </div>
+        <p>Most online text tools secretly upload your inputs to backend servers, creating compliance risks with confidential code, customer data, and proprietary drafts. Text Cleanup Studio processes 100% of your input within your browser's local sandbox memory. Zero server requests, telemetry, or cloud databases are involved, ensuring complete isolation and zero data leakage under GDPR, HIPAA, and internal security policies.</p>
+      </section>
+
+      <!-- FAQ Section (H2 + H3s) crafted for Featured Snippets (AEO) and LLM Citations (GEO) -->
+      <section class="faq-section" aria-labelledby="faqHeading">
+        <div class="faq-section-header">
+          <h2 id="faqHeading">Frequently Asked Questions</h2>
+          <p>Concise answers optimized for quick search solutions and featured snippets.</p>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How do I remove extra line breaks from copied text?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">To remove extra line breaks, paste your text into Text Cleanup Studio and activate 'Fix Double Spacing' or 'Remove Empty Lines'. The tool instantly collapses excessive newline sequences into single paragraph breaks without deleting required sentence spacing.</p>
+            </div>
+          </article>
+
+          <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How do I strip ChatGPT and Claude markdown artifacts?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Select the 'AI Response Sanitizer' preset. It automatically removes conversational preambles like 'Certainly!' and closing pleasantries, un-nests code from triple-backtick fences while preserving indented syntax, and strips unnecessary asterisks and blockquotes.</p>
+            </div>
+          </article>
+
+          <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Does this tool store or upload my text?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">No. Text Cleanup Studio operates 100% client-side inside your web browser memory. Zero bytes are uploaded, transmitted, or logged on remote servers, ensuring strict privacy for sensitive code, proprietary datasets, and personal drafts.</p>
+            </div>
+          </article>
+
+          <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How do I convert a list of items into comma-separated values?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Choose the 'List ⇄ CSV Tool' preset, or select 'Lines ➔ CSV' under Stage 4 Typography &amp; Casing. The engine strips blank rows, trims whitespace around each item, deduplicates lines, and outputs a clean comma-separated string.</p>
+            </div>
+          </article>
+
+          <article class="faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How do I detect and remove zero-width spaces online?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Paste your code or text into the input panel with 'Strip Zero-Width Characters' enabled. The regex engine targets invisible characters including zero-width spaces (\u200B), non-joiners (\u200C), byte-order marks (\uFEFF), and displays the count of purged invisible anomalies.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- ================= App Footer ================= -->
+  <footer class="app-footer">
+    <div class="footer-tags">
+      <span>🔒 Privacy Guaranteed: 100% Client-Side In-Memory Execution</span>
+      <span>•</span>
+      <span>⚡ Zero Network Calls</span>
+      <span>•</span>
+      <span>Deterministic Regex Engine</span>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:0.75rem; font-family:var(--font-mono); font-size:0.74rem;">
+      <span>Shortcuts:</span>
+      <kbd style="background:var(--border-subtle); padding:0.15rem 0.35rem; border-radius:3px;">Ctrl+Enter Clean</kbd>
+      <kbd style="background:var(--border-subtle); padding:0.15rem 0.35rem; border-radius:3px;">Ctrl+Shift+C Copy</kbd>
+      <kbd style="background:var(--border-subtle); padding:0.15rem 0.35rem; border-radius:3px;">Ctrl+Z Undo</kbd>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
